@@ -1,0 +1,375 @@
+/* 
+Miller Banner Compressed Light
+font-family: "miller-banner-compressed", sans-serif;
+font-weight: 300;
+font-style: normal;
+
+Miller Banner Compressed Light Italic
+font-family: "miller-banner-compressed", sans-serif;
+font-weight: 300;
+font-style: italic;
+
+Miller Banner Compressed Regular
+font-family: "miller-banner-compressed", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Miller Banner Compressed Regular Italic
+font-family: "miller-banner-compressed", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Adobe Kis Regular
+font-family: "adobe-kis", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Adobe Kis Italic
+font-family: "adobe-kis", sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Inter SemiBold
+font-family: "Inter", sans-serif;
+font-weight: 600;
+font-style: normal;
+
+Inter SemiBold Italic
+font-family: "Inter", sans-serif;
+font-weight: 600;
+font-style: italic;
+*/
+
+/* Reset base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles for hub hero */
+.hero {
+  padding: 2rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+.hero__content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__title {
+  font-family: "miller-banner-compressed", sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 0.8;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 4rem;
+  color: #141414;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__image {
+  width: 80vw;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__intro {
+  font-family: "adobe-kis", sans-serif;
+  font-size: 16px;
+  line-height: 100%;
+  max-width: 400px;
+  color: #141414;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+.hero__scroll-prompt {
+  display: none;
+}
+
+/* Tablet styles for hub hero */
+@media (min-width: 768px) and (max-width: 1379px) {
+  .hero {
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 4rem;
+  }
+
+  .hero__content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .hero__title {
+    font-size: 155px;
+    position: absolute;
+    left: 0;
+    top: -4.2rem;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+
+  .hero__image {
+    width: 90vw;
+    height: 550px;
+    max-width: 1000px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero__text-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    margin-top: calc(588px + 4rem);
+    margin-left: 0;
+    clear: both;
+  }
+
+  .hero__intro {
+    font-size: 16px;
+    max-width: 550px;
+    margin: 0;
+  }
+
+  .hero__scroll-prompt {
+    display: none;
+  }
+}
+
+/* Desktop styles for hub hero */
+@media (min-width: 1380px) {
+  .hero {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 4rem;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    height: 600px;
+    gap: 0;
+    position: relative;
+  }
+
+  .hero__title {
+    font-size: 155px;
+    position: absolute;
+    left: 2rem;
+    top: -4.2rem;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+
+  .hero__image {
+    width: 827px;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero__text-content {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc((100% - 827px) / 2 - 4rem);
+    max-width: 300px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1;
+    height: 588px;
+  }
+
+  .hero__intro {
+    font-size: 16px;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-top: 14rem;
+    margin-bottom: auto;
+  }
+
+  .hero__scroll-prompt {
+    display: block;
+    font-family: "adobe-kis", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #141414;
+    align-self: center;
+    margin-bottom: 4rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+  }
+}
+
+/* Base styles for hub content tiles */
+.content-tiles {
+  padding: 0 1rem 3rem 1rem;
+}
+
+.content-tiles__container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content-tiles__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.content-tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-tile:hover .content-tile__image img {
+  transform: scale(1.05);
+}
+
+.content-tile__image {
+  width: 100%;
+  height: 490px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.content-tile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.content-tile__subtitle {
+  font-family: "miller-banner-compressed", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 80%;
+  margin-bottom: 1rem;
+  color: #141414;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+.content-tile__intro {
+  font-family: "adobe-kis", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: #141414;
+  margin: 0;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+}
+
+/* Tablet styles for hub content tiles */
+@media (min-width: 768px) and (max-width: 1379px) {
+  .content-tiles {
+    padding: 0 1rem 4rem 1rem;
+  }
+
+  .content-tiles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .content-tile__image {
+    height: 490px;
+  }
+
+  .content-tile__subtitle {
+    font-size: 54px;
+  }
+
+  .content-tile__intro {
+    font-size: 22px;
+    padding-top: 14px;
+  }
+}
+
+/* Desktop styles for hub content tiles */
+@media (min-width: 1380px) {
+  .content-tiles {
+    padding: 1rem 2rem 5rem 2rem;
+  }
+
+  .content-tiles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .content-tile__image {
+    height: 670px;
+  }
+
+  .content-tile__subtitle {
+    font-size: 54px;
+  }
+
+  .content-tile__intro {
+    font-size: 22px;
+  }
+}
