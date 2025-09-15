@@ -25,7 +25,28 @@
       
       <a href="./all-that-passion-and-all-that-jazz.html" class="content-tile">
         <div class="content-tile__image">
-          {{> responsive-image src="content_tile_1" alt="Content Tile 1"}}
+          {{!-- {{> responsive-image src="content_tile_1" alt="Content Tile 1"}} --}}
+
+          <video 
+              autoplay="" 
+              muted="" 
+              loop="" 
+              poster="video/jazz.jpg" 
+              playsinline="true" 
+              disablepictureinpicture="true" 
+              preload="metadata" 
+              class="video"
+              data-id="video-jazz" 
+          >
+              <source 
+                  data-src="video/jazz.mp4" 
+                  type="video/mp4" 
+                  src="video/jazz.mp4"
+              >
+          </video>
+
+
+
         </div>
         <h3 class="content-tile__subtitle" data-id="1">ALL THAT PASSION AND ALL THAT JAZZ</h3>
         <p class="content-tile__intro">The Montreux Jazz Festival remains a highlight of Europe’s cultural calendar. Beyond the headline acts, its legacy is defined by passion, creativity and lasting friendships</p>
