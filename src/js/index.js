@@ -22,7 +22,7 @@ const exitTransition = 'transform 0.5s cubic-bezier(0.4, 0.0, 0.6, 1), opacity 0
 
 
 const startAnimation = () => {
-    const hero = document.querySelectorAll('.hero');
+    const hero = document.querySelector('.hero');
     const titleLines = document.querySelectorAll('.hero__title-line');
     const heroImageContainer = document.querySelector('.hero__image .image-container');
     const scrollPrompt = document.querySelector('.hero__scroll-prompt');
