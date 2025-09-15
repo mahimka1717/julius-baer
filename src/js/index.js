@@ -22,6 +22,7 @@ const exitTransition = 'transform 0.5s cubic-bezier(0.4, 0.0, 0.6, 1), opacity 0
 
 
 const startAnimation = () => {
+    const hero = document.querySelectorAll('.hero');
     const titleLines = document.querySelectorAll('.hero__title-line');
     const heroImageContainer = document.querySelector('.hero__image .image-container');
     const scrollPrompt = document.querySelector('.hero__scroll-prompt');
@@ -48,6 +49,13 @@ const startAnimation = () => {
         heroIntro.style.opacity = '0';
         heroIntro.style.transform = 'translateX(50px)';
     }
+
+
+    if (hero) {
+        hero.style.opacity = '1';
+    }
+
+
     
     // Запускаем анимацию заголовков с паузой 0.5s
     titleLines.forEach((line, index) => {
