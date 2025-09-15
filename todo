@@ -1,10 +1,21 @@
+julius-baer.vercel.app
+
+
 - lazy loaded mobile optimized image like next js image
-- hero slide show
-  tomorrow
-  passion
-  succession
-  capital
+  - отладить - проверить андроид, проверить айпады, проверить ретину, генерить корректные изображения
+  - настроить автоматическое сжатие tiny png сгенерированных изображений
 
-- 2 pages + 1 video page
 
-- deploy with vercel
+mobile
+ipad
+
+css -> sass
+
+
+hero
+video-hero
+cta
+related
+
+
+

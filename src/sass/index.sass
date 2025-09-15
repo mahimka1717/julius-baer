@@ -1,0 +1,340 @@
+/* Base styles for hub hero */
+.hero
+    padding: 2rem 1rem
+    position: relative
+    display: flex
+    align-items: flex-start
+    padding-top: 2rem
+    padding-bottom: 4.375rem
+
+    &__content
+        width: 100%
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+    &__title
+        font-family: "miller-banner-compressed", sans-serif
+        font-weight: 400
+        font-size: 55px
+        line-height: 0.8
+        position: relative
+        z-index: 2
+        margin-top: 0
+        margin-bottom: 1rem
+        color: #141414
+        -webkit-font-smoothing: antialiased
+        -moz-font-smoothing: antialiased
+        -o-font-smoothing: antialiased
+
+    &__title-line
+        display: block
+
+    &__image
+        width: 80vw
+        height: 200px
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 0
+        // overflow: hidden
+        .image-container
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: rgba(255, 255, 255, 0.25)
+                z-index: 1
+                pointer-events: none
+
+
+    &__image img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: 50% 80%
+
+
+
+    &__intro
+        font-family: "adobe-kis", sans-serif
+        font-size: 16px
+        line-height: 100%
+        max-width: 400px
+        color: #141414
+        margin-top: auto
+        position: relative
+        z-index: 1
+        -webkit-font-smoothing: antialiased
+        -moz-font-smoothing: antialiased
+        -o-font-smoothing: antialiased
+
+    &__scroll-prompt
+        display: none
+
+    @media (min-width: 450px) and (max-width: 767px)
+        
+        &__image
+            height: 300px
+
+        &__image img
+            object-position: 50% 50%
+
+        &__title
+            margin-bottom: 4rem
+            margin-top: 2rem
+
+    /* Tablet styles for hub hero */
+    @media (min-width: 768px) and (max-width: 1379px)
+        padding: 3rem 1rem
+        display: flex
+        align-items: flex-start
+        padding-top: 4rem
+        padding-bottom: 3rem
+
+        &__content
+            width: 100%
+            position: relative
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin: 0 auto
+
+        &__title
+            font-size: 155px
+            position: absolute
+            left: 0
+            top: -4.2rem
+            z-index: 1
+            margin-bottom: 0
+            margin-top: 2rem
+
+        &__image
+            width: 90vw
+            height: 550px
+            max-width: 1000px
+            position: absolute
+            top: 0
+            right: 0
+            z-index: 0
+            // overflow: hidden
+
+        &__image img
+            object-position: 50% 50%
+
+        &__text-content
+            position: relative
+            z-index: 1
+            width: 100%
+            max-width: 600px
+            margin-top: calc(588px + 4rem)
+            margin-left: 0
+            clear: both
+
+        &__intro
+            font-size: 16px
+            max-width: 550px
+            margin: 0
+
+        &__scroll-prompt
+            display: none
+
+    /* Desktop styles for hub hero */
+    @media (min-width: 1380px)
+
+        padding: 4rem 2rem
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        padding-top: 4rem
+        padding-bottom: 4rem
+
+        &__content
+            display: flex
+            flex-direction: row
+            align-items: flex-start
+            width: 100%
+            max-width: 1400px
+            height: 600px
+            gap: 0
+            position: relative
+
+        &__title
+            font-size: 155px
+            position: absolute
+            left: 2rem
+            top: -4.2rem
+            z-index: 1
+            margin-top: 2rem
+            margin-bottom: 0
+
+        &__image
+            width: 827px
+            height: 550px
+            position: absolute
+            left: 50%
+            top: 0
+            transform: translateX(-50%)
+            z-index: 0
+            // overflow: hidden
+
+        &__text-content
+            position: absolute
+            right: 2rem
+            top: 50%
+            transform: translateY(-50%)
+            width: calc((100% - 827px) / 2 - 4rem)
+            max-width: 300px
+            min-width: 200px
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            z-index: 1
+            height: 588px
+
+        &__intro
+            font-size: 16px
+            margin: 0
+            word-wrap: break-word
+            overflow-wrap: break-word
+            margin-top: 14rem
+            margin-bottom: auto
+
+        &__scroll-prompt
+            display: block
+            font-family: "adobe-kis", sans-serif
+            font-weight: 400
+            font-size: 16px
+            letter-spacing: 0.1em
+            color: #141414
+            align-self: center
+            margin-bottom: 4rem
+            -webkit-font-smoothing: antialiased
+            -moz-font-smoothing: antialiased
+            -o-font-smoothing: antialiased
+            animation: float 3s ease-in-out infinite
+
+
+
+/* Base styles for hub content tiles */
+.content-tiles
+    padding: 0 2rem 3rem 2rem
+
+    &__container
+        width: 100%
+        max-width: 1400px
+        margin: 0 auto
+
+    &__grid
+        display: flex
+        flex-direction: column
+        gap: 3rem
+
+    @media (min-width: 768px) and (max-width: 1379px)
+        padding: 0 1rem 4rem 1rem
+
+        &__grid
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 1rem
+
+    @media (min-width: 1380px)
+        padding: 1rem 2rem 5rem 2rem
+
+        &__grid
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 2rem
+
+
+
+
+.content-tile
+    display: block
+    text-decoration: none
+    color: inherit
+
+    &:hover &__image img
+        transform: scale(1.05)
+
+    &__image
+        width: 100%
+        height: 490px
+        margin-bottom: 0.5rem
+        overflow: hidden
+
+    &__image img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        transition: transform 0.6s ease
+
+    &__subtitle
+        font-family: "miller-banner-compressed", sans-serif
+        font-weight: 400
+        font-size: 40px
+        line-height: 80%
+        margin-bottom: 0.5rem
+        color: #141414
+        text-align: center
+        -webkit-font-smoothing: antialiased
+        -moz-font-smoothing: antialiased
+        -o-font-smoothing: antialiased
+
+    &__intro
+        font-family: "adobe-kis", sans-serif
+        font-size: 16px
+        line-height: 1
+        color: #141414
+        margin: 0
+        text-align: center
+        -webkit-font-smoothing: antialiased
+        -moz-font-smoothing: antialiased
+        -o-font-smoothing: antialiased
+
+    /* Tablet styles for hub content tiles */
+    @media (min-width: 768px) and (max-width: 1379px)
+        .content-tile__image
+            height: 490px
+            margin-bottom: 1.5rem
+
+        .content-tile__subtitle
+            font-size: 54px
+            margin-bottom: 1rem
+
+        .content-tile__intro
+            font-size: 22px
+            padding-top: 14px
+
+    /* Desktop styles for hub content tiles */
+    @media (min-width: 1380px)
+        .content-tile__image
+            height: 670px
+            margin-bottom: 1.5rem
+
+        .content-tile__subtitle
+            font-size: 54px
+            margin-bottom: 1rem
+
+        .content-tile__intro
+            font-size: 22px
+
+
+@keyframes float
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(5px)
+  100%
+    transform: translateY(0)
+    
+  // Более точные easing для каждой части анимации
+  0%
+    animation-timing-function: ease-out
+  50%
+    animation-timing-function: ease-in

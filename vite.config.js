@@ -7,7 +7,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       sass: {
-        // Настройки SASS препроцессора
       },
     },
   },
@@ -18,10 +17,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        "the-4-gen-family-board": path.resolve(__dirname, 'the-4-gen-family-board.html'),
-        "the-purpose-divergence": path.resolve(__dirname, 'the-purpose-divergence.html'),
-        "second-legacy": path.resolve(__dirname, 'second-legacy.html'),
         "all-that-passion-and-all-that-jazz": path.resolve(__dirname, 'all-that-passion-and-all-that-jazz.html'),
+        "the-4-gen-family-board": path.resolve(__dirname, 'the-4-gen-family-board.html'),
+        "second-legacy": path.resolve(__dirname, 'second-legacy.html'),
         index: path.resolve(__dirname, 'index.html'),
       }
     }
@@ -29,8 +27,7 @@ export default defineConfig({
   plugins: [
     handlebars({
       partialDirectory: [
-        resolve(__dirname, 'src/hbs'),
-        resolve(__dirname, 'src/hbs/partials')
+        resolve(__dirname, 'src/hbs')
       ],
     })
   ],
