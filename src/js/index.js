@@ -55,7 +55,7 @@ const startAnimation = () => {
         hero.style.opacity = '1';
     }
 
-
+    const startDelay = 200
     
     // Запускаем анимацию заголовков с паузой 0.5s
     titleLines.forEach((line, index) => {
@@ -63,7 +63,7 @@ const startAnimation = () => {
             line.style.transition = 'opacity 1.2s cubic-bezier(0.25, 1.25, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1.25, 0.5, 1)';
             line.style.opacity = '1';
             line.style.transform = 'translateY(0)';
-        }, 500 + index * 150);
+        }, startDelay + index * 150);
     });
     
     // Анимация изображения (синхронно с первым заголовком)
@@ -71,7 +71,7 @@ const startAnimation = () => {
         heroImageContainer.style.transition = 'opacity 1.3s cubic-bezier(0.25, 1.25, 0.5, 1), transform 1.3s cubic-bezier(0.25, 1.25, 0.5, 1)';
         heroImageContainer.style.opacity = '1';
         heroImageContainer.style.transform = 'scale(1) translateY(0)';
-    }, 500);
+    }, startDelay);
     
     // Анимация hero__intro (после последнего заголовка)
     if (heroIntro) {
@@ -79,7 +79,7 @@ const startAnimation = () => {
             heroIntro.style.transition = 'opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.25, 1.25, 0.5, 1)';
             heroIntro.style.opacity = '1';
             heroIntro.style.transform = 'translateX(0)';
-        }, 500 + titleLines.length * 150 + 100);
+        }, startDelay + titleLines.length * 150 + 100);
     }
     
     // Анимация scroll prompt
@@ -92,7 +92,7 @@ const startAnimation = () => {
         setTimeout(() => {
             slideShow();
         }, 600);
-    }, 500 + titleLines.length * 150 + 200);
+    }, startDelay + titleLines.length * 150 + 200);
 };
 
 const slideShow = () => {
