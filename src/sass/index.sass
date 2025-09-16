@@ -30,6 +30,7 @@
         -webkit-font-smoothing: antialiased
         -moz-font-smoothing: antialiased
         -o-font-smoothing: antialiased
+        max-width: 380px
 
     &__title-line
         display: block
@@ -78,8 +79,9 @@
     &__scroll-prompt
         display: none
 
-    // Mobile styles for hero title lines
-    @media (max-width: 449px)
+
+    @media (max-width: 767px)
+        
         &__title-line
             &:nth-child(1),
             &:nth-child(2),
@@ -87,18 +89,17 @@
             &:nth-child(4)
                 display: inline-block
 
-    @media (min-width: 450px) and (max-width: 767px)
-        
-        &__image
-            height: 300px
+        // &__image
+        //     height: 300px
 
-        &__image img
-            object-position: 50% 50%
+        // &__image img
+        //     object-position: 50% 50%
 
-        &__title
-            margin-bottom: 4rem
-            margin-top: 2rem
-            font-size: 55px
+        // &__title
+        //     margin-bottom: 4rem
+        //     margin-top: 2rem
+        //     font-size: 55px
+        //     max-width: unset
 
     /* Tablet styles for hub hero */
     @media (min-width: 768px) and (max-width: 1379px)
@@ -124,6 +125,7 @@
             z-index: 1
             margin-bottom: 0
             margin-top: 2rem
+            max-width: unset
 
         &__image
             width: 90vw
