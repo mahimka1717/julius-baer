@@ -1,21 +1,9 @@
-julius-baer.vercel.app
+hub:
 
-
-- lazy loaded mobile optimized image like next js image
-  - отладить - проверить андроид, проверить айпады, проверить ретину, генерить корректные изображения
-  - настроить автоматическое сжатие tiny png сгенерированных изображений
-
-
-mobile
-ipad
-
-css -> sass
-
+- redo mobile
+- loading bug with images
 
 hero
 video-hero
 cta
 related
-
-
-
