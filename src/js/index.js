@@ -187,6 +187,33 @@ const slideShow = () => {
 
 
 
+// Функция для ожидания загрузки конкретных Adobe шрифтов
+const waitForFonts = async () => {
+    try {
+        // Список шрифтов, которые нужно дождаться
+        const requiredFonts = [
+            { family: 'adobe-kis', weight: '400' },
+            { family: 'miller-banner-compressed', weight: '400' }
+        ];
+        
+        // Проверяем доступность каждого шрифта
+        const fontPromises = requiredFonts.map(font => {
+            return document.fonts.load(`${font.weight} 16px "${font.family}"`);
+        });
+        
+        // Ждем загрузки всех нужных шрифтов
+        await Promise.all(fontPromises);
+        console.log('Adobe шрифты загружены:', requiredFonts.map(f => f.family));
+        return true;
+    } catch (error) {
+        console.warn('Ошибка при загрузке Adobe шрифтов:', error);
+        // Если есть ошибка, все равно запускаем анимацию через 3 секунды
+        return new Promise(resolve => setTimeout(() => resolve(true), 3000));
+    }
+};
+
 document.addEventListener("DOMContentLoaded", async () => {
+    // Ждем загрузки шрифтов перед запуском анимации
+    await waitForFonts();
     startAnimation();
 });

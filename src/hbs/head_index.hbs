@@ -1,3 +1,23 @@
+<!-- Preconnect to Adobe Fonts -->
+<link rel="preconnect" href="https://use.typekit.net" crossorigin>
+<!-- Preload Adobe Fonts CSS -->
+<link rel="preload" href="https://use.typekit.net/gmu2dfd.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Preload hero gallery images -->
+<link rel="preload" as="image" href="/images/hero_1.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="/images/hero_2.jpg">
+<link rel="preload" as="image" href="/images/hero_3.jpg">
+<link rel="preload" as="image" href="/images/hero_4.jpg">
+
+
+
+<!-- Hide hero until fonts are loaded (only when JS is enabled) -->
+<style>
+  .enhanced .hero {
+    opacity: 0;
+  }
+</style>
+
 <script type="module" src="/src/js/styles.js"></script>
 <script type="module" src="/src/js/safari-polyfill.js"></script>
 <script type="module" src="/src/js/index.js"></script>

@@ -1,8 +1,16 @@
 {{!-- Responsive image partial --}}
 <img 
-  class="lazyload"
+  class="{{#if eager}}{{else}}lazyload{{/if}}"
+  {{#if eager}}
+  src="/images/{{src}}.jpg"
+  srcset="/images/{{src}}_400.jpg 400w, /images/{{src}}_600.jpg 600w, /images/{{src}}.jpg 800w"
+  sizes="(max-width: 400px) 300px, (max-width: 768px) 400px, (max-width: 1200px) 350px, 450px"
+  loading="eager"
+  fetchpriority="high"
+  {{else}}
   data-src="/images/{{src}}.jpg"
   data-srcset="/images/{{src}}_400.jpg 400w, /images/{{src}}_600.jpg 600w, /images/{{src}}.jpg 800w"
   data-sizes="(max-width: 400px) 300px, (max-width: 768px) 400px, (max-width: 1200px) 350px, 450px"
+  {{/if}}
   alt="{{alt}}"
 />
