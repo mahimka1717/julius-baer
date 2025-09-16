@@ -4,13 +4,13 @@
   {{#if eager}}
   src="/images/{{src}}.jpg"
   srcset="/images/{{src}}_400.jpg 400w, /images/{{src}}_600.jpg 600w, /images/{{src}}.jpg 800w"
-  sizes="(max-width: 400px) 300px, (max-width: 768px) 400px, (max-width: 1200px) 350px, 450px"
+  sizes="(max-width: 767px) 400px, (max-width: 1199px) 600px, 800px"
   loading="eager"
   fetchpriority="high"
   {{else}}
   data-src="/images/{{src}}.jpg"
   data-srcset="/images/{{src}}_400.jpg 400w, /images/{{src}}_600.jpg 600w, /images/{{src}}.jpg 800w"
-  data-sizes="(max-width: 400px) 300px, (max-width: 768px) 400px, (max-width: 1200px) 350px, 450px"
+  data-sizes="(max-width: 767px) 400px, (max-width: 1199px) 600px, 800px"
   {{/if}}
   alt="{{alt}}"
 />

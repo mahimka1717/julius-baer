@@ -160,11 +160,13 @@ const slideShow = () => {
             heroImg.setAttribute('data-srcset', 
                 `/images/${currentImage}_400.jpg 400w, /images/${currentImage}_600.jpg 600w, /images/${currentImage}.jpg 800w`
             );
+            heroImg.setAttribute('data-sizes', '(max-width: 767px) 400px, (max-width: 1199px) 600px, 800px');
             heroImg.setAttribute('alt', `hero ${currentIndex + 1}`);
             
             if (heroImg.src) {
                 heroImg.src = `/images/${currentImage}.jpg`;
                 heroImg.srcset = `/images/${currentImage}_400.jpg 400w, /images/${currentImage}_600.jpg 600w, /images/${currentImage}.jpg 800w`;
+                heroImg.sizes = '(max-width: 767px) 400px, (max-width: 1199px) 600px, 800px';
             }
             
             heroImageContainer.style.transition = 'none'

@@ -11,7 +11,7 @@ export function createResponsiveImage(imagePath, alt = '') {
   ].join(', ');
   
   // Оптимальные sizes для большинства случаев
-  const sizes = "(max-width: 400px) 300px, (max-width: 768px) 400px, (max-width: 1200px) 350px, 450px";
+  const sizes = "(max-width: 767px) 400px, (max-width: 1199px) 600px, 800px";
   
   return `
     <img 
