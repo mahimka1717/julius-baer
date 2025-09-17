@@ -1,13 +1,32 @@
 <section class="videohero">
-    <iframe 
-  
-        src="https://www.youtube.com/embed/zqlzbtNANEw?controls=1&&mute=1" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
-    </iframe>
+    <div id="youtube-player">
+        <!-- Fallback если JavaScript не сработал -->
+        <iframe 
+            src="https://www.youtube.com/embed/zqlzbtNANEw?controls=1&mute=1&modestbranding=1&iv_load_policy=3&rel=0" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </iframe>
+    </div>
 </section>
+
+<!-- YouTube Player API Script -->
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+// Inline скрипт для отладки
+console.log('Inline script loaded');
+
+// Проверяем что элемент существует
+document.addEventListener('DOMContentLoaded', function() {
+    const element = document.getElementById('youtube-player');
+    console.log('Element found:', element);
+    if (element) {
+        console.log('Element HTML:', element.innerHTML);
+    }
+});
+</script>
 
 <div class="videoheader">
     <h1 class="videoh1">All that passion and all that jazz</h1>
