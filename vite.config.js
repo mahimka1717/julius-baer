@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import handlebars from 'vite-plugin-handlebars';
 import path from 'path';
+import fs from 'fs';
 
 export default defineConfig({
   css: {
@@ -16,18 +17,19 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: {
-        "all-that-passion-and-all-that-jazz": path.resolve(__dirname, 'all-that-passion-and-all-that-jazz.html'),
-        "the-4-gen-family-board": path.resolve(__dirname, 'the-4-gen-family-board.html'),
-        "second-legacy": path.resolve(__dirname, 'second-legacy.html'),
-        index: path.resolve(__dirname, 'index.html'),
-      }
+      input: Object.fromEntries(
+        fs.readdirSync(__dirname)
+          .filter(file => file.endsWith('.html'))
+          .map(file => [ path.basename(file, '.html'), path.resolve(__dirname, file) ])
+      )
     }
   },
   plugins: [
     handlebars({
       partialDirectory: [
-        resolve(__dirname, 'src/hbs')
+        resolve(__dirname, 'src/hbs'),
+        resolve(__dirname, 'src/hbs/head'),
+        resolve(__dirname, 'src/hbs/components')
       ],
     })
   ],
