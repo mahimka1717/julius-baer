@@ -1,0 +1,110 @@
+@use 'mixins' as *
+@use 'variables' as *
+
+.related[data-id="legacy"]
+    .related-wrapper
+        .journey[data-id="3"]
+            display: none
+
+.related[data-id="family"]
+    .related-wrapper
+        .journey[data-id="2"]
+            display: none
+
+.related[data-id="jazz"]
+    .related-wrapper
+        .journey[data-id="1"]
+            display: none
+
+.related
+    padding-top: 78px
+
+    .related-header
+        color: #333
+        text-align: center
+        font-family: "adobe-kis", sans-serif
+        font-size: 35px
+        font-style: normal
+        font-weight: 400
+        line-height: 72px
+        mrgin-bottom: 1rem
+
+    .related-wrapper
+        display: flex
+        gap: 10px
+        @include mbp-down(md)
+            flex-direction: column
+        
+        .journey
+            flex: 1
+            max-width: 50%
+            @include mbp-down(md)
+                flex: unset
+                max-width: unset
+
+.journey
+    height: 386px
+    overflow: hidden
+    a
+        height: 100%
+        display: block
+        position: relative
+        padding: 35px 20px
+        color: white
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        .journey-img
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            &:after
+                content: ""
+                position: absolute
+                top: 50%
+                left: 0
+                width: 100%
+                height: 50%
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0))
+                pointer-events: none
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: 50% 50%
+                transition: transform 0.6s ease
+            video
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: 50% 50%
+
+
+
+            
+
+        .journey-title
+            position: relative
+            font-family: "adobe-kis", sans-serif
+            font-size: 25px
+            font-style: normal
+            font-weight: 400
+            line-height: 30px
+            margin-bottom: 11px
+        .journey-desc
+            position: relative
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 19.2px
+            max-width: 80%
+
+
+
+    &:hover 
+        a 
+            .journey-img
+                img
+                    transform: scale(1.05)
