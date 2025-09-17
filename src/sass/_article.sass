@@ -29,7 +29,6 @@
       font-size: 32px
       padding: 0 1rem
 
-
   p
     color: #141414
     font-family: "adobe-kis", sans-serif
@@ -44,10 +43,6 @@
     a
       text-decoration: underline
       color: inherit
-      
-
-
-
 
 .quote
   max-width: 468px
@@ -72,18 +67,17 @@
     font-weight: 400
     line-height: 140%
 
-
 .image
-    &[data-id="legacy-1"],
-    &[data-id="legacy-3"],
-    &[data-id="family-1"],
-    &[data-id="family-3"]
-      width: 718px
-      height: 588px
-      margin: 0 auto
-      @include mbp-down(md)
-        width: calc(100% - 2rem)
-        height: 343px
+  &[data-id="legacy-1"],
+  &[data-id="legacy-3"],
+  &[data-id="family-1"],
+  &[data-id="family-3"]
+    width: 718px
+    height: 588px
+    margin: 0 auto
+    @include mbp-down(md)
+      width: calc(100% - 2rem)
+      height: 343px
 
     &[data-id="legacy-2"],
     &[data-id="family-2"]
@@ -93,6 +87,94 @@
         height: 212px
 
     img
-        width: 100%
-        height: 100%
-        object-fit: cover
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+.videohero
+  width: 100%
+  position: relative
+  overflow: hidden
+  // Используем aspect-ratio для поддержания пропорций 1048:589
+  aspect-ratio: 1048 / 589
+  // Ограничиваем максимальную высоту
+  max-height: calc(100vh - 106px + 10px)
+
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: none
+    display: block
+
+.videoheader
+  width: 100%
+  background-color: rgba(197, 134, 117, 1)
+  padding: 26px 0
+  display: flex
+  justify-content: center
+  margin-bottom: 25px
+  @include mbp-down(md)
+    margin-bottom: 40px
+
+  .videoh1
+    color: #141414
+    font-family: "miller-banner-compressed", sans-serif
+    font-size: 97.94px
+    font-style: normal
+    font-weight: 300
+    line-height: 80%
+    text-transform: uppercase
+    margin: 0
+    max-width: 1440px
+    width: 100%
+    padding: 0 45px
+    @include mbp-down(md)
+      font-size: 71px
+      padding: 0 1rem
+
+.videocontent
+  position: relative
+  display: flex
+  justify-content: center
+
+  div
+    width: 100%
+    max-width: 1440px
+    padding: 0 45px
+    position: relative
+    display: flex
+    gap: 98px
+    @include mbp-down(lg)
+      flex-direction: column
+      gap: 29px
+    @include mbp-down(md)
+      padding: 0 1rem
+      
+
+  .videodescription
+    flex: 1
+    color: #141414
+    font-family: "adobe-kis", sans-serif
+    font-size: 22px
+    font-style: normal
+    font-weight: 400
+    line-height: 100%
+    @include mbp-down(lg)
+      max-width: 487px
+
+  .videotext
+    color: #141414
+    font-family: "adobe-kis", sans-serif
+    font-size: 19px
+    font-style: normal
+    font-weight: 400
+    line-height: 140%
+    width: 100%
+    max-width: 718px
+    @include mbp-down(lg)
+      align-self: flex-end
+    @include mbp-down(md)
+      font-size: 16px
