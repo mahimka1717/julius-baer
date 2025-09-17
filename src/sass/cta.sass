@@ -5,98 +5,41 @@
     position: relative
     width: 100vw
     margin-left: calc( (100% - 100vw) / 2)
+    
+    margin-top: 11rem
+    @include mbp-down(md)
+        margin-top: 3rem
 
-    .cta-image-wrapper
-        position: relative
-        width: 100%
-        overflow: hidden
-        &[data-id="snow"]
-            height: 2240px
-            margin-bottom: -1px
-            @include mbp-down(xxl)
-                height: 1440px
-            @include mbp-down(lg)
-                height: 1170px
-            @include mbp-down(md)
-                height: 560px
-
-        &[data-id="sand"]
-            height: 1003px
-            @include mbp-down(lg)
-                height: 1003px
-                img
-                    object-position: 95% 20%
-            @include mbp-down(md)
-                height: 992px
-                img
-                    object-position: 85% 20%
-
-        .cta-image-top-gradient
-            position: absolute
-            top: 0
-            background: linear-gradient(180deg, rgba(244, 245, 249, 1) 0%, rgba(244, 245, 249, 0) 100%)
-            height: 120px
-            width: 100%
-
-        .cta-image-bottom-gradient
-            bottom: calc(283px - 586px)
-            position: absolute
-            background: linear-gradient(180deg, rgba(7, 9, 8, 0.00) 0%, #070908 47.12%)
-            height: 586px
-            width: 100%
-
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
-            display: block
+    &[data-id="family"]
+        background-color: rgba(162, 193, 204, 1)
+    &[data-id="jazz"]
+        background-color: rgba(197, 134, 117, 1)
+    &[data-id="legacy"]
+        background-color: rgba(125, 160, 229, 1)
 
     .cta-wrapper
-        padding: 0 10px 88px 10px
+        padding: 6.25rem 1rem
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
         width: 100%
-
-        &[data-id="snow"],
-        &[data-id="surf"]
-            position: relative
-
-        &[data-id="sand"]
-            position: absolute
-            bottom: 0
-
-        &[data-id="snow"]
-            @include mbp-down(md)
-                padding: 100px 10px 88px 10px
+        @include mbp-down(md)
+            padding: 3rem 1rem
 
         .cta-text
-
             text-align: center
-            font-family: $font-header
-            font-size: 42px
+            font-family: "adobe-kis", sans-serif
+            font-size: 35px
             font-style: normal
-            font-weight: 300
-            line-height: 110%
+            font-weight: 400
+            line-height: 42px
             letter-spacing: 0.42px
-            text-transform: uppercase
-            margin: 0 auto 57px auto
-            max-width: 485px
-            &[data-id="snow"]
-                color: $color-snow-light
-            &[data-id="sand"]
-                color: $color-sand-light
-            &[data-id="surf"]
-                color: $color-snow-dark
+            margin: 0 auto 24px auto
+            // max-width: 485px
+            color: #fff
 
-            @include mbp-down(xl)
-                font-size: 32px
-                max-width: 425px
-            @include mbp-down(md)
-                margin: 0 auto 40px auto
-                font-size: 28px
-                max-width: 310px
+
 
         .cta-button-wrapper
             position: relative
@@ -107,39 +50,27 @@
                 align-items: center
                 justify-content: center
                 gap: 10px
-                padding: 14px 16px
+                padding: 11px 24px
                 position: relative
                 flex: 0 0 auto
-                background-color: $transparent
+                background-color: #fff
                 transition: all 0.5s ease-in-out
-                &[data-id="snow"]
-                    border: 1px solid $color-snow-light
-                &[data-id="sand"]
-                    border: 1px solid $color-sand-light
-                &[data-id="surf"]
-                    border: 1px solid $color-snow-dark
+                border: none
+                text-transform: uppercase
+
 
                 &:hover
-                    &[data-id="snow"]
-                        background-color: $color-snow-light
-                    &[data-id="sand"]
-                        background-color: $color-sand-light
-                    &[data-id="surf"]
-                        background-color: $color-snow-dark
+                    background-color: #355778
                     .cta-button-text
-                        &[data-id="snow"]
-                            color: $color-snow-dark
-                        &[data-id="sand"]
-                            color: $color-sand-dark
-                        &[data-id="surf"]
-                            color: $color-snow-light
+                        color: #fff
 
                 .cta-button-text
+                    color: #355778
                     position: relative
                     width: fit-content
                     margin-top: -1.00px
-                    font-family: $font-subheader
-                    font-weight: 400
+                    // font-family: "miller-banner-compressed", sans-serif
+                    font-weight: 600
                     font-size: 20px
                     text-align: center
                     letter-spacing: 0.20px
@@ -147,6 +78,7 @@
                     white-space: nowrap
                     transition: all 0.5s ease-in-out
                     text-transform: uppercase
+                    // letter-spacing: 5px
                     @include mbp-down(xl)
                         font-size: 18px
                     @include mbp-down(md)
