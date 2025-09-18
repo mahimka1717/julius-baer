@@ -20,8 +20,8 @@ function onYouTubeIframeAPIReady() {
         width: '100%',
         height: '100%',
         playerVars: {
-            'controls': 1,
-            'mute': 1,
+            'controls': 0,
+            'mute': 0,
             'modestbranding': 1,
             'iv_load_policy': 3,
             'rel': 0,
