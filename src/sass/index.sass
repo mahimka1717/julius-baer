@@ -249,7 +249,7 @@
 
     &__container
         width: 100%
-        max-width: 1400px
+        // max-width: 1400px
         margin: 0 auto
 
     &__grid
@@ -258,7 +258,7 @@
         gap: 3rem
 
     @media (min-width: 768px) and (max-width: 1379px)
-        padding: 0 1rem 4rem 1rem
+        padding: 0 0rem 4rem 0rem
 
         &__grid
             display: grid
@@ -266,7 +266,7 @@
             gap: 1rem
 
     @media (min-width: 1380px)
-        padding: 1rem 2rem 5rem 2rem
+        padding: 1rem 0rem 5rem 0rem
 
         &__grid
             display: grid
@@ -280,6 +280,8 @@
     display: block
     text-decoration: none
     color: inherit
+    width: 100%
+    
 
     &:hover &__image img
         transform: scale(1.05)
@@ -322,6 +324,7 @@
 
     /* Tablet styles for hub content tiles */
     @media (min-width: 768px) and (max-width: 1379px)
+        max-width: 445px
         .content-tile__image
             height: 490px
             margin-bottom: 1.5rem
@@ -336,6 +339,7 @@
 
     /* Desktop styles for hub content tiles */
     @media (min-width: 1380px)
+        max-width: 445px
         .content-tile__image
             height: 670px
             margin-bottom: 1.5rem
@@ -348,6 +352,12 @@
 
         .content-tile__intro
             font-size: 16px
+
+// Alignment for third tile
+.content-tile:nth-child(2)
+    justify-self: center
+.content-tile:nth-child(3)
+    justify-self: end
 
 
 @keyframes float
