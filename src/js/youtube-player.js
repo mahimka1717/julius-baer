@@ -16,7 +16,7 @@ function onYouTubeIframeAPIReady() {
     // console.log('Инициализация YouTube Player...');
     
     player = new YT.Player('youtube-player', {
-        videoId: 'zqlzbtNANEw', // ID видео
+        videoId: 'ZBfwzZDrrNo', // ID видео
         width: '100%',
         height: '100%',
         playerVars: {
