@@ -14,9 +14,9 @@ function onYouTubeIframeAPIReady() {
     }
     
     // console.log('Инициализация YouTube Player...');
-   
+    
     player = new YT.Player('youtube-player', {
-        videoId: 'ZBfwzZDrrNo', // ID видео
+        videoId: 'zqlzbtNANEw', // ID видео
         width: '100%',
         height: '100%',
         playerVars: {
@@ -29,7 +29,7 @@ function onYouTubeIframeAPIReady() {
             'fs': 1,
             'cc_load_policy': 0,
             'playsinline': 1,
-            'autoplay': 1,
+            'autoplay': 1
         },
         events: {
             'onReady': onPlayerReady,
